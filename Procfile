@@ -1,1 +1,1 @@
-web: gunicorn Mshop.asgi
+web: gunicorn Mshop.asgi:application
