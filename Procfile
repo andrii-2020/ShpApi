@@ -1,1 +1,1 @@
-web: ginicorn Mshop.asgi
+web: gunicorn Mshop.asgi
