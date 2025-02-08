@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*', 'shpapi-production.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app/']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
