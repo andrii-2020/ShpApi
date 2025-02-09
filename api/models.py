@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 class Category(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name='Назва')
     description = models.TextField(blank=True)
 
     class Meta:
@@ -54,14 +54,16 @@ class Color(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
-    stock = models.PositiveIntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    sizes = models.ManyToManyField(Size, related_name='products')
-    colors = models.ManyToManyField(Color, related_name='products')
+    name = models.CharField(max_length=200, verbose_name='Назва')
+    description = models.TextField(verbose_name='Описання')
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Ціна')
+    newPrice = models.DecimalField(max_digits=10, decimal_places=2, default=0,  verbose_name='Новаціна по Акцій')
+    newPrice_Yes_No = models.BooleanField(default=False, verbose_name='Показати Акцію')
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE, verbose_name='Категорія')
+    stock = models.PositiveIntegerField(verbose_name='Штук в Наявності')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Назва')
+    sizes = models.ManyToManyField(Size, related_name='products', verbose_name='Розмір')
+    colors = models.ManyToManyField(Color, related_name='products', verbose_name='Колір')
 
     class Meta:
         verbose_name = "Продукт"
@@ -73,7 +75,7 @@ class Product(models.Model):
 
 
 class ProductImage(models.Model):
-    product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE, verbose_name='Вибери продукт')
     image = models.ImageField(upload_to='product_images/')
     is_primary = models.BooleanField(default=False)
 
