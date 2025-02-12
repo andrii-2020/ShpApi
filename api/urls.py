@@ -4,7 +4,8 @@ from .views import (
     CategoryDetail, 
     ProductListCreate, 
     ProductDetail,
-    CreateImage
+    CreateImage,
+    PostTo
 )
 
 
@@ -14,4 +15,5 @@ urlpatterns = [
     path('products/', ProductListCreate.as_view(), name='product-list'),
     path('products/<int:pk>/', ProductDetail.as_view(), name='product-detail'),
     path('products/image/<int:pk>/', CreateImage.as_view(), name='CreateImage-detail'),
+    path('sms/', PostTo.as_view(), name='CreateImage-detail'),
 ]
