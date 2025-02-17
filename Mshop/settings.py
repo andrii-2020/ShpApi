@@ -15,9 +15,9 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['https://shpapi-production.up.railway.app']
+ALLOWED_HOSTS = ['shpapi-production.up.railway.app', '127.0.0.1', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['shpapi-production.up.railway.app']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
