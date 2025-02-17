@@ -15,7 +15,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['https://shpapi-production.up.railway.app/']
+ALLOWED_HOSTS = ['https://shpapi-production.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app/']
 
