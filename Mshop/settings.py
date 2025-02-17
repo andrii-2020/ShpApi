@@ -15,7 +15,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['www.shpapi-production.up.railway.app/', '127.0.0.1', 'localhost', '83.25.177.56']
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app/']
 
@@ -134,7 +134,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 APPEND_SLASH = False
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "mystaticfiles")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/product_images')
 MEDIA_URL = '/media/'
 
