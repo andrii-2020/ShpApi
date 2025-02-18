@@ -20,9 +20,10 @@ class Size(models.Model):
         ('M', 'Medium'),
         ('L', 'Large'),
         ('XL', 'Extra Large'),
-        ('XXL', 'Extra Extra Large')
+        ('XXL', 'Extra Extra Large'),
+        ('XXXL', 'Extra Extra Extra Large')
     ]
-    name = models.CharField(max_length=3, choices=SIZES, unique=True)
+    name = models.CharField(max_length=4, choices=SIZES, unique=True)
 
     class Meta:
         verbose_name = "Розмір"
