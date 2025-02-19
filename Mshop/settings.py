@@ -15,7 +15,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://shopmakss.netlify.app/']
 
 CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app']
 
@@ -132,7 +132,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-APPEND_SLASH = False
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "mystaticfiles")]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/product_images')
