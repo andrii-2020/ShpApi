@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
 ]
-ALLOWED_HOSTS = ['.shopmakss.netlify.app']
+ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
+#CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 
 MIDDLEWARE = [
