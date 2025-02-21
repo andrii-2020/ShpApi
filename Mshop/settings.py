@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 #CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 ROOT_URLCONF = 'Mshop.urls'
