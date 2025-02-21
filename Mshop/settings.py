@@ -11,8 +11,6 @@ env = environ.Env(
 )
 
 SECRET_KEY = env("SECRET_KEY")
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
 
 
 DEBUG = env("DJANGO_DEBUG")
@@ -22,8 +20,6 @@ ALLOWED_HOSTS = ['shopmakss.netlify.app',
                  '127.0.0.1',
                  '.localhost',
                  '192.168.0.103',
-                 "35.156.32.13",
-                 '83.25.177.56'
                  ]
 
 CSRF_TRUSTED_ORIGINS = ['https://shopmakss.netlify.app']
