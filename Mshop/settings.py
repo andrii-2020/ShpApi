@@ -23,7 +23,7 @@ ALLOWED_HOSTS = ['shopmakss.netlify.app',
                  '.localhost',
                  '192.168.0.103',
                  "35.156.32.13",
-                 '192.168.1.1'
+                 '83.25.177.56'
                  ]
 
 CSRF_TRUSTED_ORIGINS = ['https://shopmakss.netlify.app']
