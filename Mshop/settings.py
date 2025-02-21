@@ -2,7 +2,6 @@ import environ
 from pathlib import Path
 import os
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
@@ -12,14 +11,24 @@ env = environ.Env(
 )
 
 SECRET_KEY = env("SECRET_KEY")
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['shopmakss.netlify.app',
+                 'www.shopmakss.netlify.app',
+                 '*.netlify.app',
+                 '127.0.0.1',
+                 '.localhost',
+                 '[::1]',
+                 '192.168.0.103'
+                 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app']
-
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -52,6 +61,7 @@ CSRF_COOKIE_SECURE = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
