@@ -17,12 +17,13 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['https://shopmakss.netlify.app/',
+ALLOWED_HOSTS = ['shopmakss.netlify.app',
                  '*.netlify.app',
                  '127.0.0.1',
                  '.localhost',
                  '[::1]',
-                 '192.168.0.103'
+                 '192.168.0.103',
+                 "35.156.32.13"
                  ]
 
 CSRF_TRUSTED_ORIGINS = ['https://shopmakss.netlify.app']
