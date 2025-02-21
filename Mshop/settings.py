@@ -17,8 +17,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['shopmakss.netlify.app',
-                 'www.shopmakss.netlify.app',
+ALLOWED_HOSTS = ['https://shopmakss.netlify.app/',
                  '*.netlify.app',
                  '127.0.0.1',
                  '.localhost',
@@ -26,7 +25,7 @@ ALLOWED_HOSTS = ['shopmakss.netlify.app',
                  '192.168.0.103'
                  ]
 
-CSRF_TRUSTED_ORIGINS = ['https://shpapi-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://shopmakss.netlify.app']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
