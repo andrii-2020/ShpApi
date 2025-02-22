@@ -94,10 +94,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Mshop.wsgi.application'
 
 
-ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'shpapi-production.up.railway.app']
+ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'bugivava.pythonanywhere.com']
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
+CORS_ALLOWED_ORIGINS = ['https://bugivava.pythonanywhere.com']
 
 
 
