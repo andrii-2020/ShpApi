@@ -7,7 +7,7 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
 env = environ.Env(
-    DJANGO_DEBUG=(bool, False)
+    DJANGO_DEBUG=(bool, True)
 )
 
 SECRET_KEY = env("SECRET_KEY")
@@ -42,10 +42,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
 ]
-ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_ALLOW_ALL = True
-#CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 
 MIDDLEWARE = [
@@ -84,6 +81,24 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Mshop.wsgi.application'
+
+
+ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app']
+
+CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
+CORS_ALLOW_CREDENTIALS = True
+
+# Security settings
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 
 # Database
