@@ -7,7 +7,7 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
 env = environ.Env(
-    DJANGO_DEBUG=(bool, True)
+    DJANGO_DEBUG=(bool, False)
 )
 
 SECRET_KEY = env("SECRET_KEY")
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'Mshop.wsgi.application'
 
 ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'shpapi-production.up.railway.app']
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 
