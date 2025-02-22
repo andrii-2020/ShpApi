@@ -83,7 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Mshop.wsgi.application'
 
 
-ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app']
+ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'shpapi-production.up.railway.app']
 
 CORS_ORIGIN_ALLOW_ALL = True
 #CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
