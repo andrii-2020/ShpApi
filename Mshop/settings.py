@@ -25,6 +25,17 @@ CORS_ALLOW_METHODS = [
     "POST",
     "PUT",
 ]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 APPEND_SLASH = True
 
@@ -86,7 +97,7 @@ WSGI_APPLICATION = 'Mshop.wsgi.application'
 ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'shpapi-production.up.railway.app']
 
 CORS_ORIGIN_ALLOW_ALL = True
-#CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
+CORS_ALLOWED_ORIGINS = ['https://shopmakss.netlify.app']
 
 
 
