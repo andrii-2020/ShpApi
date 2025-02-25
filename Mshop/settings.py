@@ -57,7 +57,6 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
-
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -94,9 +93,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Mshop.wsgi.application'
 
 
-ALLOWED_HOSTS = ['192.168.1.17', 'shopmakss.netlify.app', 'bugivava.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'shopmakss.netlify.app', 'bugivava.pythonanywhere.com', '127.0.0.1']
 
-CORS_ORIGIN_ALLOW_ALL = False
+
+
+CORS_ORIGIN_ALLOW_ALL = True #false productions
 CORS_ALLOWED_ORIGINS = ['https://bugivava.pythonanywhere.com']
 
 
@@ -110,6 +111,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation

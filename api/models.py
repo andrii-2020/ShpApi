@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import RegexValidator
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='Назва')
@@ -33,27 +32,6 @@ class Size(models.Model):
         return self.name
 
 
-
-class Color(models.Model):
-    name = models.CharField(max_length=50)
-    hex_code = models.CharField(
-        max_length=7, 
-        validators=[
-            RegexValidator(
-                regex=r'^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
-                message='Введіть коректний HEX-код кольору'
-            )
-        ]
-    )
-
-    class Meta:
-        verbose_name = "Колір"
-        verbose_name_plural = "Кольори"
-
-    def __str__(self):
-        return f"{self.name} ({self.hex_code})"
-
-
 class Product(models.Model):
     name = models.CharField(max_length=200, verbose_name='Назва')
     description = models.TextField(verbose_name='Описання')
@@ -64,7 +42,6 @@ class Product(models.Model):
     stock = models.PositiveIntegerField(verbose_name='Штук в Наявності')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Назва')
     sizes = models.ManyToManyField(Size, related_name='products', verbose_name='Розмір')
-    colors = models.ManyToManyField(Color, related_name='products', verbose_name='Колір')
 
     class Meta:
         verbose_name = "Продукт"
